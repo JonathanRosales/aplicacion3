@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Segunda Aplicacion</title>
+
+<!-- grupo CSS-->
+<link rel="stylesheet" href="css/app3.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/historia1.png','imagenes/ubicacion1.png','imagenes/actividad2.png','imagenes/caidaceniza.png','imagenes/zonas1.png')">
+<div data-role="page" id="Principal" data-theme="b">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+   <h1>Volcan Popocatepetl</h1>
+   </div>
+       
+<div>
+<!-- Start WOWSlider.com -->
+<iframe src="visor/indexwow1.html" style="width:960px;height:360px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+<!-- End WOWSlider.com -->
+<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-"b">
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Historia y Leyenda acerca del Volcan Popocatepetl</h2>
+<p>Toca para ver la Información</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Antiguedad del Volcan Popocatepetl</h2>
+<p>Toca para ver la Información</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>¿Donde se encuentra ubicado el Volcan Popocatepetl?</h2>
+<p>Toca para ver la Información</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>¿Que dimensiones tiene el Volcan Popocatepetl?</h2>
+<p>Toca para ver la Información</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Registros de Actividad Volcanica</h2>
+<P>Toca para ver la Información</P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Monitoreo del Volcan Popocatepetl</h2>
+<P>Toca para ver la Información</P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Medidas Preventivas en caso de Caida de Ceniza o Erupción</h2>
+<P>Toca para ver la Información</P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Zonas de Riesgo del Volcan Popocatepetl</h2>
+<P>Toca para ver la Información</P>
+</a>
+</li>
+</ul>
+</div>
+<div data-role="footer" align="center" data-theme="b" data-position="fixed">
+<div>
+<img src="imagenes/popo.png" width="46" height="46">
+</div>
+<div>
+<h4>Aplicacion Tres</h4>
+<h4>Jonathan Antonio Rosales Espinoza</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="c">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+<h1>Historia o Leyenda</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Leyenda de los volcanes</h2>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image17','','imagenes/historia1.png',1)"><img src="imagenes/historia.png" width="25%" height="25%" id="Image17"></a> </div>
+<h3>La leyenda de los volcanes es una historia de la mitología mexica que cuenta con múltiples versiones, todas ellas buscan dar explicación a la presencia de los volcanes Popocatépetl e Iztaccíhuatl en el Valle de México.
+
+En la mitología mexica, Iztaccíhuatl fue una princesa que se enamoró de Popocatépetl, uno de los guerreros de su padre. El padre de la princesa envió al guerrero a una batalla a Oaxaca, prometiéndole entregarle a su hija si regresaba victorioso y con la cabeza de su enemigo en la lanza. Tiempo después el guerrero regresó con la cabeza de su rival sangrando en su lanza, por lo que recibió un festín por su victoria. Sin embargo, su amor se dio por acabado ya que la princesa había muerto. Con el corazón roto llevó el cuerpo de su amada a un monte y los dioses la convirtieron en volcán inactivo. Después, el guerrero tomó una antorcha y prometió que ningún huracán por más fuerte que llevara sus aguas apagaría el fuego con el que vela el cuerpo de su amada. Por esto, los dioses le entregaron la eternidad convirtiéndolo en volcán a cambio de custodiar a la princesa Iztaccíhuatl.</h3>
+<img src="imagenes/historia2.png" width="50%" height="50%"> </div>
+<div data-role="footer" data-theme="c">
+<h4> Aplicacion tres, JARE</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="c">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="c">
+<h1>Antiguedad</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Origen</h2>
+<img src="imagenes/origen.png" width="50%" height="50%">
+<h3>El Popocatépetl surgió a finales del Cenozoico, en el plioceno por lo que aproximadamente tiene 5 millones de años de edad. En conjunto con el Iztaccíhuatl forman una "asociación volcánica o sistema binario volcánico".</h3>
+<img src="imagenes/origen1.png" width="50%" height="50%">
+<h3>El Popocatépetl (en náhuatl: popocatepetl, ‘el cerro que humea’‘popoca, humear; tepetl, cerro’)? es un volcán activo localizado en el centro de México, en los límites territoriales de los estados de Morelos, Puebla y México. Se localiza a unos 72 km al sureste de la Ciudad de México, 43 km de Puebla, 63 km de Cuernavaca, y 53 km de Tlaxcala.3</h3>
+</div>
+</div>
+<div data-role="footer" data-theme="c">
+<h4> Aplicacion tres, JARE</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Ubicación</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Estados en los que se encuentra el Volcan Popocatepetl</h2>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','imagenes/ubicacion1.png',1)"><img src="imagenes/ubicacion.png" width="50%" height="50%" id="Image15"></a>
+<h3>El Popocatépetl esta ubicado en los estados de Morelos, Puebla (45 kilometros) y el Estado de México( a 55 kilometros). Al sur de la Sierra Volcánica Transversal que constituye la espina dorsal del Altiplano Mexicano.
+
+En el Estado de México colinda con los municipios: Tlamanalco, Amecameca, Atlauta y Ecatzingo.
+
+Con el estado de Morelos colinda específicamente con el municipio de Tetela del Volcán.
+
+Por la parte de Puebla colinda con Huejotzingo, San Salvador el Verde, Domingo Arenas, San Nicolás de los Ranchos y Tochimilco.
+Descansa al sur de la Ciudad de México sobre los estados de Puebla, Morelos y México, en una provincia fisiográfica nombrada Eje Neovolcánico o Eje Volcánico Transversal, que es una cadena de volcanes que incluye al Iztaccíhuatl, al Paricutín y al Nevado de Toluca, entre otros.</h3>
+<img src="imagenes/ubicacion2.png" width="50%" height="50%"> </div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4> Aplicacion tres, JARE</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Tamaño del Volcan Popocatepetl</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Dimensiones</h2>
+<img src="imagenes/tamaño.png" width="50%" height="50%">
+<h3>Es un volcán de forma cónica simétrica.
+Su altura sobre el nivel del mar es de 5,452 m.(17,887 pies).
+El cráter en la parte más ancha mide 612 m. y en la más angosta 400 m. Tiene una profundidad máxima de 505 m. y es el vértice donde limitan tres estados: México, Puebla y Morelos.
+Las dos principales cimas del Popo son el Pico Mayor y el Espinazo del Diablo, ambos alrededor del cráter.
+Es el segundo volcán más alto de nuestro país; el primero lo ocupa el Pico de Orizaba o Citlaltépetl con 5,747 m. y el tercero el Iztaccíhuatl o Ixtaccíhualtl ( Con quien esta unido por la parte norte mediante un paso montañoso conocido como Paso de Cortés) con 5,286 m. de altura.</h3>
+<img src="imagenes/tamaño1.png" width="50%" height="50%">
+<h3>De apariencia casi simétrica, cubre una superficie de 283,192.53 hectáreas y tiene una altura de 5,426 metros sobre el nivel del mar. Posee un cráter elíptico de paredes empinadas con una profundidad de 150 metros desde el labio inferior, un diámetro mayor de 900 metros y un ancho total de 400 x 600 metros.
+El paisaje en la zona que rodea al Popocatépetl contiene varios tipos de ecosistemas con rica variedad de flora y fauna. Hay bosques mixtos de pino, oyamel y encino, donde coexisten hasta 1,000 especies de plantas. Sobre el cono, principalmente cerca de la boca, se encuentran glaciares que durante los últimos años han disminuido.</h3>
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4> Aplicacion tres, JARE</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Actividad Volcanica</h1>
+</div>
+<div data-role="content" align="center">
+   <div data-role="main" class="ui-content">
+      <div data-role="collapsible" data-content-theme="false">
+      <h1>Registros de Actividad</h1>
+   <div>
+      <p>Ha tenido por lo menos cuatro erupciones explosivas que colapsaron el cono, dando como resultado enormes derrumbes prehistóricos de enormes proporciones.
+
+Hace 14,000 años ocurrió una gran erupción que produjo abundantes lluvias de ceniza y piedra pómez. Durante los siguientes12 milenios han sucedido por lo menos seis grandes erupciones explosivas. La última gran erupción ocurrió aproximadamente entre los años 800 y 1,000 de nuestra era.
+
+1363 Comienza a humear.<br>
+1519 y 1528 arroja humo, cenizas y piedras incandescentes.<br>
+1530 produce solo humo.<br>
+1539 lanza grandes llamas, piedras y cenizas.<br>
+1570 Para este año incrementó la actividad sísmica.<br>
+1571 Arrojó gran cantidad de cenizas.<br>
+1592 Arrojó vapores y cenizas.<br>
+1663 Arroja gran cantidad de ceniza y con ella piedras pómez.<br>
+1665 Estuvo arrojando cenizas por varios días.<br>
+1697 Hizo una erupción de fuego.<br>
+1720 Registró una nueva erupción.<br>
+1790, 1802 y 1804 Arrojaba una columna de humo.<br>
+1919: La erupción registrada en este año fue considerada por algunos como consecuencia de una explosión de dinamita provocada para la extracción de azufre. Los orígenes de esta actividad la inició Hernán Cortés en 1519 cuando mandó a Diego de Ordaz a que subiera el Popo pero no logró alcanzar el cráter; en cambio al año siguiente otros soldados sacaron azufre para fabricar pólvora.<br>
+En 1947 ocurrió una erupción de consideración, para iniciar así un periodo de actividad.<br>
+A lo largo de 1992 y 1993 aumentaron las fumarolas y los microsismos.<br>
+21 de diciembre de 1994 registró una explosión que produjo gas y cenizas que fueron transportados por los vientos dominantes, llegando llegaron más allá del Estado de Puebla. Cabe señalar que en este año los monasterios del siglo XVI construidos en las laderas del volcán, fueron declarados Patrimonio de la Humanidad por la UNESCO.<br>
+1995 Registro una actividad fluctuante.<br>
+Marzo de 1996: En esta año aumentó la actividad y se formó un domo en el cráter.<br>
+30 de abril de 1996, El popo lanza una lluvia de piedras incandescentes, provocando la muerte de cinco expertos alpinistas que exploraban el volcán. Durante este año también se registraron varios microsismos.<br>
+El 30 de junio de 1997 lanzó una fumarola de 8 kilómetros de altura y 50 kilómetros de diámetro.
+20 de junio del 2003.<br>
+21 de septiembre del 2003.<br>
+25 de diciembre de 2005: Se produjo una nueva explosión que provocó una columna de humo y cenizas de tres kilómetros de altura y la expulsión de lava.<br>
+Como el volcán esta activo, es constantemente vigilado y existen planes de emergencia por si hay necesidad de evacuar a los 23 pueblos que viven en sus faldas. Los encargados son el Centro Nacional de Prevención de Desastres CENAPRED, que opera en la Ciudad Universitaria, en la capital del país.</p>
+      <br>
+      </div>
+    <div>
+      <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','imagenes/actividad2.png',1)"><img src="imagenes/actividad3.png" width="50%" height="50%" id="Image12"></a> </div>
+      </div>
+    </div>
+<h2>Registros</h2>
+<img src="imagenes/actividad.png" width="50%" height="50%">
+<div>
+<h2>Erupción 4 y 5 de noviembre de 2014</h2>
+<h3>A las 22:30 del 4 de noviembre ya era visible una gran columna de humo sobre el volcán la cual terminó a la 1:15 de la mañana, durante este periodo de tiempo se observaron diversas explosiones que contenían material incandescente, vapor de agua, pequeñas cantidades de ceniza a las 11:45 pm el CENAPRED declaró que el volcán había entrado en un estado eruptivo, pero que esas pequeñas erupciones estaban previstas en el nivel de alerta volcánica AMARILLO Fase 2 por lo que no era necesario modificar el nivel de alerta. Durante esta actividad no hubo lesionados y ningún incidente ya que la ceniza y material incandescente cayó únicamente en el Paso de Cortés.</h3>
+<img src="imagenes/actividad1.png" width="50%" height="50%">
+<h2>Alta actividad volcánica</h2>
+<h3>El Popocatépetl es conocido por sus alta actividad volcánica, que se presenta comúnmente. Desde que se reactivó, en 1997, hasta el momento, ha presentado una serie de erupciones de las cuales la más violenta ha sido la del año 2000, y la última la noche del 4 y madrugada del 5 de noviembre de 2014. El volcán es uno de los más monitoreados del mundo y también es uno de los más peligrosos y que amenaza más de 26 millones de personas.</h3>
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4> Aplicacion tres, JARE</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Sistemas de Monitoreo del Volcan Popocatepetl</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Paginas de Monitoreo</h2>
+<h3>A continuacion te ponemos a tu disposición los links de las paginas encargadas de monitorear el volcan las 24 hrs del dia</h3>
+<a href="http://www.webcamsdemexico.com/webcam-popocatepetl#">Haga Clic para ver la imagen desde San Nicolas de los Ranchos</a>
+<br>
+<br>
+<a href="http://www.cenapred.unam.mx/popo/UltimaImagenVolcanI.html">Haga Clic para ver la imagen desde la pagina del Cenapred</a>
+<br>
+<br>
+<a href="http://www.oronoticias.com.mx/popocatepetl/envivo/">Haga Clic para ver la Pagina en Vivo de Oro Noticias</a>
+<br>
+<br>
+<a href="http://www.webcamsdemexico.com/videos.php?v=6mB8VOCvY4o&streams=1">Haga Clic para ver en vivo desde San Nicolas de los Ranchos</a>
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4> Aplicacion tres, JARE</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Medidas Preventivas en caso de Caida de Ceniza o Alta Actividad Volcanica</h1>
+</div>
+<div data-role="content" align="left">
+<div data-role="main" class="ui-content">
+      <div data-role="collapsible" data-content-theme="false">
+      <h1>Caida De Ceniza</h1>
+      <div>
+      <p>Ante la actividad del volcán Popocatépetl, la Secretaría de Gobernación apoyada por diversas instituciones científicas desarrolló un sistema de alertamiento para determinar en qué momento la población y las autoridades de Protección Civil deberán activar las acciones correspondientes de prevención y auxilio.
+Este documento traduce dicho sistema en el semáforo de alerta volcánica y expone su funcionamiento para lograr limitar las pérdidas de todo tipo, a través de una mayor efectividad en las acciones de Protección Civil.
+</p>
+      <br>
+      </div>
+    <div>
+    <center><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','imagenes/caidaceniza.png',1)"><img src="imagenes/caidaceniza1.png" width="50%" height="50%" id="Image13"></a><7center>
+<p>•	No humedecer la ceniza a fin de evitar taponamientos en el sistema de alcantarillado.<br>
+•	Mantén la calma.<br>
+•	Utiliza medios electrónicos y de comunicación para obtener información confiable que den las autoridades de Protección Civil sobre la caída de ceniza y atiende siempre sus instrucciones.<br>
+•	No realices actividades al aire libre y si es posible no salgas.<br>
+•	Cierra puertas y ventanas y coloca toallas o trapos húmedos en las rendijas.<br>
+•	Si tienes que salir cúbrete con un pañuelo o tapabocas, limpia ojos y garganta con agua pura.<br>
+•	Para los ojos, usa lentes protectores, especialmente si usas lentes de contacto.<br>
+•	Ten a la mano una linterna y pilas.<br>
+•	La ceniza volcánica puede ser resbaladiza, sobre todo cuando está mojada. Toma las precauciones necesarias.<br>
+•	Cubre tinacos, cisternas y depósitos de agua.<br>
+•	Barre y retira la ceniza de techos, azoteas, patios y calles, deposítalas en bolsas y no permitas que se vaya al drenaje.<br>
+•	Si es posible no conduzcas, si tienes que hacerlo, hazlo a baja velocidad y con las luces encendidas, ya que la ceniza dificulta la visibilidad y provoca que el pavimento se vuelva resbaloso.<br>
+•	Ante la caída de ceniza volcánica evita consumir alimentos en la vía pública.<br>
+•	Si permaneces expuesto por algún tiempo a las cenizas volcánicas, al ingresar a tu casa se recomienda cambiar de ropa.<br>
+•	Durante la caída de ceniza volcánica, evita que los menores realicen actividades al aire libre.<br>
+•	Mantén a tus mascotas en un lugar techado al igual que sus alimentos. Si tus macotas salen, cepíllalos antes de permitirles la entrada nuevamente.<br>
+•	La ceniza puede ser usada para parques, jardines, macetas o tierras de cultivo, ya que es rica en minerales.<br>
+•	No repitas ni difundas rumores. La ciudad de Puebla se encuentra a una distancia segura, no intentes salir.<br>
+•	Usa las vías de comunicación solo en caso de ser necesario.<br>
+
+Una erupción volcánica puede ser un acontecimiento impresionante y destructivo. A continuación se indican varios consejos para evitar el peligro y saber qué hacer si te sorprende una erupción.
+</p>
+      </div>
+      </div>
+    </div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+      <h1>Alta Actividad Volcanica o Erupción</h1>
+      <div>
+      <p>Consejos de seguridad:</p>
+      <br>
+      </div>
+    <div>
+    <center><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','imagenes/erupcion1.jpg',0)"><img src="imagenes/erupcion.png" width="50%" height="50%" id="Image14"></a></center>
+<h3>•	Mantente alejado de volcanes activos.
+  •	Si vives cerca de un volcán activo, prepara un kit de emergencia que incluya gafas de seguridad, una máscara, una linterna y una radio en buen estado que funcione con pilas.<br>
+•	Elabora una ruta de evacuación y ten el depósito de gasolina del coche siempre lleno.<br>
+•	Evacua siguiendo las recomendaciones de las autoridades para no encontrarte lava y barro, así como rocas y escombros que puede arrojar el volcán.<br>
+•	Evita zonas de ríos y regiones bajas.<br>
+•	Antes de abandonar tu casa, ponte una camisa de manga larga y pantalones largos; usa gafas de seguridad o normales, sin lentillas. Ponte una máscara de emergencia o envuélvete la cara con un paño húmedo.<br>
+•	Si no vas a evacuar, cierra puertas y ventanas, y bloquea la chimenea y otros puntos de ventilación para evitar que la ceniza entre en la casa.<br>
+•	Ten en cuenta que la ceniza puede sobrecargar el tejado y puedes necesitar retirarla. Durante la limpieza, lleva elementos de protección.<br>
+•	La ceniza puede dañar motores y piezas metálicas, así que evita conducir. Si debes conducir, no superes los 55 kilómetros por hora.<br>
+</h3>
+       </div>
+      </div>
+<div>
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4> Aplicacion tres, JARE</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Zonas de Riesgo del Volcan Popocatepetl</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Zonas de Riesgo</h2>
+<img src="imagenes/zonas-riesgo-popo.png" width="50%" height="50%"> </div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4> Aplicacion tres, JARE</h4>
+</div>
+</div>
+</div>
+
+</body>
+</html>
